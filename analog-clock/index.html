@@ -49,7 +49,17 @@
         <h1 class="text-[40px] tracking-[-1px] ">A quieter way to keep time</h1>
         <p class="mb-9 mt-3 text-sm text-[#748174]">Slow down. Let the seconds find their rhythm.</p>
         <div class="relative w-[392px] h-[392px] rounded-[196px] bg-[#E9E7DF] p-4 shadow-[0_30px_55px_-20px_#344a3840,inset_0_2px_3px_#ffffff] relative border border-white/80">
-          <div class="relative aspect-square w-[360px] rounded-full border border-[#d8dbd1] bg-[#fcfbf7] shadow-[inset_0_3px_12px_#253b2510,0_0_0_1px_#ffffff80]"></div>
+          <div id="clock" class="relative aspect-square w-[360px] rounded-full border border-[#d8dbd1] bg-[#fcfbf7] shadow-[inset_0_3px_12px_#253b2510,0_0_0_1px_#ffffff80]">
+            <div id="markers" class="absolute inset-0"></div>
+            <div id="numbers" class="absolute inset-0"></div>
+            <p class="absolute left-1/2 top-[28%] -translate-x-1/2 text-[9px] tracking-[3px] text-[#8f998a]" >SWISS</p>
+            <div id="hour" class="absolute bottom-1/2 left-1/2 z-10 h-[27%] w-[7px] origin-bottom -translate-x-1/2 rounded-full bg-[#253b35] shadow-[1px_3px_3px_#253b3520]"></div>
+            <div id="minute" class="absolute bottom-1/2 left-1/2 z-20 h-[34%] w-[4px] origin-bottom -translate-x-1/2 rounded-full bg-[#253b35] shadow-[1px_3px_3px_#253b3520]"></div>
+            <div id="second" class="absolute bottom-1/2 left-1/2 z-30 h-[39%] w-[2px] origin-bottom -translate-x-1/2 rounded-full bg-[#c47e57]">
+              <span class="absolute top-full h-6 w-full bg-[#c47e57]"></span>
+            </div>
+            <div class="absolute left-1/2 top-1/2 z-40 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#c47e57] ring-4 ring-[#fcfbf7]"></div>
+          </div>
         </div>
       </div>
       
