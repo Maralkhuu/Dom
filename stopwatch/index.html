@@ -42,9 +42,13 @@
       </header>
 
       <div class="flex flex-1 items-center justify-center py-10">
-        <div class="w-[620px] h-[551px] rounded-[28px] border border-[#FFFFFF26] p-10">
+        <div
+          class="w-[620px] h-[551px] rounded-[28px] border border-[#FFFFFF26] p-10"
+        >
           <div class="w-[540px] h-[44px] flex justify-between">
-            <div class="w-[44px] h-[44px] rounded-[12px] bg-[#B5CBB21A] flex justify-center items-center">
+            <div
+              class="w-[44px] h-[44px] rounded-[12px] bg-[#B5CBB21A] flex justify-center items-center"
+            >
               <div class="">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -63,28 +67,103 @@
                 </svg>
               </div>
             </div>
-            <div class="w-[62px] h-[29px] rounded-[99px] border border-[#C5D9BD26] text-[#C5D9BD] text-xs flex justify-center items-center" >Ready</div>
-          </div>
-          <div class="mt-[28px] width-[195px] h-[60px] text-[#F0FDF4] text-[40px]">Stopwatch</div>
-          <div class="mt-[8px] w-[186px] h-[17px] text-[14px] text-[#A4B9AD] ">Make time for what matters.</div>
-          <div class="w-[540px] h-[1px] mt-[36px] bg-[#B5CBB226] "></div>
-          <div class="w-[540px] h-[86px]">
-            <div class="w-[166.67px] h-[86px] flex flex-col gap-[16px]">
-              <div class="w-[66px] h-[56px] text-[56px] text-[#EDF3E8]">00</div>
-              <div>HOURS</div>
-            </div>
-            <div>:</div>
-            <div class="w-[166.67px] h-[86px] flex flex-col gap-[16px]">
-              <div class="w-[66px] h-[56px] text-[56px] text-[#EDF3E8]">00</div>
-              <div>MINUTES</div>
-            </div>
-            <div>:</div>
-            <div class="w-[166.67px] h-[86px] flex flex-col gap-[16px]">
-              <div class="w-[66px] h-[56px] text-[56px] text-[#EDF3E8]">00</div>
-              <div>SECONDS</div>
+            <div
+             id="state" class="w-[62px] h-[29px] rounded-[99px] border border-[#C5D9BD26] text-[#C5D9BD] text-xs flex justify-center items-center"
+            >
+              Ready
             </div>
           </div>
-          <div></div>
+          <div
+            class="mt-[28px] width-[195px] h-[60px] text-[#F0FDF4] text-[40px]"
+          >
+            Stopwatch
+          </div>
+          <div class="mt-[8px] w-[186px] h-[17px] text-[14px] text-[#A4B9AD]">
+            Make time for what matters.
+          </div>
+          
+          <div class="mt-9 border-y border-[#b5cbb2]/15 py-9">
+            <div
+              id="timer"
+              class="grid grid-cols-[1fr_20px_1fr_20px_1fr] items-start"
+            >
+              <div class="flex flex-col items-center gap-4">
+                <span
+                  id="hours"
+                  class="font-mono text-[56px] font-light leading-none tracking-[-2px] tabular-nums text-[#edf3e8]"
+                  >00</span
+                >
+                <span
+                  class="text-[9px] font-medium tracking-[2px] text-[#9bad9e]"
+                  >HOURS</span
+                >
+              </div>
+
+              <span
+                class="text-center font-mono text-[40px] leading-[56px] text-[#5c7161]"
+                >:</span
+              >
+
+              <div class="flex flex-col items-center gap-4">
+                <span
+                  id="minutes"
+                  class="font-mono text-[56px] font-light leading-none tracking-[-2px] tabular-nums text-[#edf3e8]"
+                  >00</span
+                >
+                <span
+                  class="text-[9px] tracking-[2px] text-[#9bad9e]"
+                  >MINUTES</span
+                >
+              </div>
+
+              <span
+                class="text-center text-[40px] leading-[56px] text-[#5c7161]"
+                >:</span
+              >
+
+              <div class="flex flex-col items-center gap-4">
+                <span
+                  id="seconds"
+                  class="font-mono text-[56px] font-light leading-none tracking-[-2px] tabular-nums text-[#c5d9bd]"
+                  >00</span
+                >
+                <span
+                
+                  class="text-[9px] tracking-[2px] text-[#9bad9e]"
+                  >SECONDS</span
+                >
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-[2fr_1fr_1fr] gap-3">
+            <button
+              id="start-button"
+              type="button"
+              class="h-12 cursor-pointer rounded-xl bg-[#b5cbb2] text-sm font-semibold text-[#102418] transition-colors enabled:hover:bg-[#c5d9bd] disabled:cursor-not-allowed disabled:opacity-35"
+            >
+              Start
+            </button>
+            <button
+              id="stop-button"
+              type="button"
+              disabled
+              class="h-12 cursor-pointer rounded-xl border border-white/10 bg-white/5 text-sm font-medium text-[#dcece2] transition-colors enabled:hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5d9bd] disabled:cursor-not-allowed disabled:opacity-35"
+            >
+              Pause
+            </button>
+            <button
+              id="reset-button"
+              type="button"
+              disabled
+              class="h-12 cursor-pointer rounded-xl border border-white/10 text-sm font-medium text-[#a4b9ad] transition-colors enabled:hover:bg-white/5 enabled:hover:text-[#f0fdf4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5d9bd] disabled:cursor-not-allowed disabled:opacity-35"
+            >
+              Reset
+            </button>
+          </div>
+          <p class="mt-5 text-center text-xs text-[#8aa294]">
+            A moment of focus. At your own pace.
+          </p>
         </div>
       </div>
     </div>
