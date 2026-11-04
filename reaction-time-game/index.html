@@ -50,12 +50,12 @@
           <p class="w-[313px] h-[24px] text-[14px] text-[#A1A1AA] mt-2">
             Wait for green, then click as quickly as you can.
           </p>
-          <div
-            class="w-[512px] h-[256px] rounded-[16px] flex gap-3 bg-[#27272A] mt-6 flex-col justify-center items-center"
-          >
+          <button id="target" type="button" class="w-[512px] h-[256px] rounded-[16px] flex gap-3 bg-[#27272A]
+            mt-6 flex-col justify-center items-center">
+            
             <div>
-              <div
-                class="flex size-[46px] items-center justify-center bg-[#29292B]"
+              <div id="symbol"
+                class="flex size-[46px] items-center justify-center "
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -72,14 +72,16 @@
                 </svg>
               </div>
             </div>
-            <p class="h-[29px] text-[24px] text-[#F4F4F5]">Ready when you are</p>
-            <p class="h-[17px] text-[14px] text-[#F4F4F5]">Click to start</p>
-          </div>
+            <p id="message" class="h-[29px] text-[24px] text-[#F4F4F5]">
+              Ready when you are
+            </p>
+            <p id="hint" class="h-[17px] text-[14px] text-[#F4F4F5]">Click to start</p>
+          </button>
           <div class="w-[512px] h-[84px] flex gap-3 mt-6">
             <div
               class="w-[250px] h-[84px] rounded-[12px] flex gap-1 flex-col bg-[#27272A] justify-center items-center"
             >
-              <div class="w-[24px] h-[29px] text-[24px] text-[#D9F99D]">—</div>
+              <div id="last" class="w-[24px] h-[29px] text-[24px] text-[#D9F99D]">—</div>
               <div class="w-[73px] h-[15px] text-[12px] text-[#A1A1AA]">
                 Last attempt
               </div>
@@ -87,7 +89,7 @@
             <div
               class="w-[250px] h-[84px] rounded-[12px] flex gap-1 flex-col bg-[#27272A] justify-center items-center"
             >
-              <div class="w-[24px] h-[29px] text-[24px] text-[#D9F99D]">—</div>
+              <div id="best" class="w-[24px] h-[29px] text-[24px] text-[#D9F99D]">—</div>
               <div class="w-h-[15px] text-[12px] text-[#A1A1AA]">
                 Best this session
               </div>
